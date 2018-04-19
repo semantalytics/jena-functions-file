@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.semantalytics.stardog</groupId>
-    <artifactId>kibbles-string-metric</artifactId>
+    <artifactId>kibbles-file</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <developers>
@@ -27,8 +27,8 @@
     <scm>
         <url>http://github.com/semantalytics.com/stardog-kibbles</url>
         <tag>HEAD</tag>
-        <connection>scm:git:http://github.com/semantalytics/stardog-kibbles</connection>
-        <developerConnection>scm:git:http://github.com/semantalytics/stardog-kibbles</developerConnection>
+        <connection>scm:git:http://github.com/semantalytics-stardog/kibbles-file</connection>
+        <developerConnection>scm:git:http://github.com/semantalytics-stardog/kibbles-file</developerConnection>
     </scm>
 
     <licenses>
@@ -64,162 +64,22 @@
         <guava.version>23.3-jre</guava.version>
         <jhardware.version>0.8.5</jhardware.version>
         <oshi.version>3.4.4</oshi.version>
+        <xml-apis.version>1.4.01</xml-apis.version>
     </properties>
 
     <dependencies>
-        <!--
-        <dependency>
-            <groupId>com.github.oshi</groupId>
-            <artifactId>oshi-parent</artifactId>
-            <version>${oshi.version}</version>
-        </dependency>
-        -->
-        <dependency>
-            <groupId>org.jhardware</groupId>
-            <artifactId>jHardware</artifactId>
-            <version>${jhardware.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.kcthota</groupId>
-            <artifactId>emoji4j</artifactId>
-            <version>${emoji4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>edu.stanford.nlp</groupId>
-            <artifactId>stanford-corenlp</artifactId>
-            <version>3.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.uima</groupId>
-            <artifactId>uimaj-core</artifactId>
-            <version>${uima.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.heideltime</groupId>
-            <artifactId>heideltime</artifactId>
-            <version>${heideltime.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.threeten</groupId>
-            <artifactId>threeten-extra</artifactId>
-            <version>${threeten-extra.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.javamoney</groupId>
-            <artifactId>moneta</artifactId>
-            <version>${moneta.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.slugify</groupId>
-            <artifactId>slugify</artifactId>
-            <version>${slugify.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.ibm.icu</groupId>
-            <artifactId>icu4j</artifactId>
-            <version>${icu4j.version}</version>
-        </dependency>
         <dependency>
             <groupId>com.complexible.stardog</groupId>
             <artifactId>server</artifactId>
             <version>${stardog.version}</version>
             <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>com.complexible.stardog</groupId>
-            <artifactId>client-http</artifactId>
-            <version>${stardog.version}</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>pl.allegro.finance</groupId>
-            <artifactId>tradukisto</artifactId>
-            <version>${tradukisto.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.joestelmach</groupId>
-            <artifactId>natty</artifactId>
-            <version>${natty.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.ocpsoft.prettytime</groupId>
-            <artifactId>prettytime</artifactId>
-            <version>${prettytime.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.ocpsoft.prettytime</groupId>
-            <artifactId>prettytime-nlp</artifactId>
-            <version>${prettytime-nlp.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.complexible.stardog.core</groupId>
-            <artifactId>stardog</artifactId>
-            <version>${stardog.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>info.debatty</groupId>
-            <artifactId>java-string-similarity</artifactId>
-            <version>0.24</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.davidmoten</groupId>
-            <artifactId>geo</artifactId>
-            <version>0.7.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
-            <version>1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode.libphonenumber</groupId>
-            <artifactId>libphonenumber</artifactId>
-            <version>8.8.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jayway.jsonpath</groupId>
-            <artifactId>json-path</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-crypto</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.mpkorstanje</groupId>
-            <artifactId>simmetrics-core</artifactId>
-            <version>4.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tika</groupId>
-            <artifactId>tika-core</artifactId>
-            <version>1.16</version>
-        </dependency>
-        <dependency>
-            <groupId>com.complexible.stardog.utils</groupId>
-            <artifactId>stardog-utils-rdf</artifactId>
-            <version>${stardog.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.fusesource.jansi</groupId>
-            <artifactId>jansi</artifactId>
-            <version>${jansi.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -230,7 +90,7 @@
         <dependency>
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
-            <version>1.4.01</version>
+            <version>${xml-apis.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -270,6 +130,7 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.4.3</version>
                 <configuration>
+                    <minimizeJar/>
                     <filters>
                         <filter>
                             <artifact>*:*</artifact>
@@ -307,7 +168,7 @@
                         <exclude>**/*</exclude>
                     </excludes>
                     <includes>
-                        <include>**/StringTestSuite.java</include>
+                        <include>**/*TestSuite.java</include>
                     </includes>
                 </configuration>
             </plugin>
